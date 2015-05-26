@@ -1,0 +1,383 @@
+.pp-section.pp-table{
+    -webkit-transform: translate3d(100%, 0px, 0px);
+    transform: translate3d(100%, 0px, 0px);
+}
+
+.pp-section.active{
+    -webkit-transform: translate3d(0, 0px, 0px);
+    transform: translate3d(0, 0px, 0px);
+}
+
+.pp-section{
+    -webkit-transition: all 1s ease;                  
+    -moz-transition: all 1s ease;                 
+    -o-transition: all 1s ease;   
+    -ms-transition: all 1s ease;          
+    transition: all 1s ease;
+}
+
+#menu {
+	z-index:20;
+    position:fixed;
+    left:0;
+    bottom: 62%;
+    width: 180px;
+    height: 200px;
+}
+
+.main {
+    background-color: #fef200;
+    background-image: url("../img/lays_sky_blue_01.jpg");
+    background-repeat:  no-repeat ;
+    background-position: left bottom;
+    background-size: 100% auto;
+
+}
+.picnik {
+    background-color: #fef200;
+    background-image: url("../img/lays_sky_blue_02.jpg");
+    background-repeat:  no-repeat ;
+    background-position: left bottom;
+    background-size: 100% auto;
+}
+
+.beach {
+    background-color: #fef200;
+    background-image: url("../img/lays_sky_blue_03.jpg");
+    background-repeat:  no-repeat ;
+    background-position: left bottom;
+    background-size: 100% auto;
+}
+
+.party {
+    background-color: #034a74;
+    background-image: url("../img/lays_sky_blue_04.jpg");
+    background-repeat:  no-repeat ;
+    background-position: left bottom;
+    background-size: 100% auto;
+}
+
+.main,.picnik,.beach,.party {
+    background-position: bottom left;
+    background-attachment:fixed;    
+    background-repeat:no-repeat;
+}
+
+
+.oblaka-1, .oblaka-2, .oblaka-3, .oblaka-4 {
+    z-index:6;
+    position:fixed;
+    left:0;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:  no-repeat ;
+    background-position: left bottom;
+    background-size: 100% auto;
+}
+
+.oblaka-1 { background-image: url("../img/lays_clouds_stars_01.png"); }
+.oblaka-2 { background-image: url("../img/lays_clouds_stars_02.png"); }
+.oblaka-3 { background-image: url("../img/lays_clouds_stars_03.png"); }
+.oblaka-4 { background-image: url("../img/lays_clouds_stars_04.png"); }
+
+.composition-1, .composition-2, .composition-3, .composition-4 {
+    z-index:7;
+    position:fixed;
+    left:0;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:  no-repeat ;
+    background-position: left bottom;
+    background-size: 100% auto;
+}
+
+.composition-1 { background-image: url("../img/lays_main_bg_01.png"); }
+.composition-2 { background-image: url("../img/lays_main_bg_02.png"); }
+.composition-3 { background-image: url("../img/lays_main_bg_03.png"); }
+.composition-4 { background-image: url("../img/lays_main_bg_04.png"); }
+
+
+#board{
+	position: fixed;
+	
+	width:44%;
+	height:100%;
+	
+    background-image: url("../img/board.png");
+    background-repeat:  no-repeat ;
+    background-position: left bottom;
+    background-size: 100% auto;
+
+    z-index: 100;
+    left: 1%;
+    bottom: 1%;
+}
+
+
+#shari{
+    position: fixed;
+    z-index: 10;
+    -webkit-transition: all 1s ease;                  
+    -moz-transition: all 1s ease;                 
+    -o-transition: all 1s ease;   
+    -ms-transition: all 1s ease;          
+    transition: all 1s ease;
+
+    left: 62%;
+    bottom: 24%;
+    margin-bottom: 173px;
+    margin-left: -170px;
+}
+
+
+
+.pp-viewing-page2 #shari{
+    left: 31%;
+    bottom: 27%;
+    margin-bottom: 173px;
+    margin-left: -170px;
+}
+
+.pp-viewing-page3 #shari{
+    left: 43%;
+    bottom: 24%;
+    margin-bottom: 173px;
+    margin-left: -170px;
+}
+
+.pp-viewing-page4 #shari{
+    left: 76%;
+    bottom: 28%;
+    margin-bottom: 173px;
+    margin-left: -170px;
+}
+
+#oblaka{
+    position: fixed;
+    left:0;
+    bottom: 0px;
+    background-repeat: repeat-x;
+    background-image: url("../img/oblaka.png");
+    /*z-index: 18;*/
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+     -webkit-transition: all 1s ease;                  
+    -moz-transition: all 1s ease;                 
+    -o-transition: all 1s ease;   
+    -ms-transition: all 1s ease;          
+    transition: all 1s ease;
+}
+
+
+
+
+
+
+.special {
+    position:relative;
+    float:left;
+    width:840px;
+    height:247px;    
+    margin-bottom:46px;
+    cursor:pointer;
+    
+}
+#counter {
+    position:absolute;
+    top:115px;
+    left:115px;
+    z-index:4000;
+}
+
+
+.digit {
+    background-image:url(../img/slot-prizes.png);
+    -webkit-transition: all 3s ease-out;                  
+    -moz-transition: all 3s ease-out;                 
+    -o-transition: all 3s ease-out;   
+    -ms-transition: all 3s ease-out;          
+    transition: all 3s ease-out;
+}
+.digit-spacer {
+	width:21px;
+}
+#shading {
+    background-color: #ffffff;
+    background-image: url(../img/roll_bg_grey.png);
+    background-repeat: repeat-x;
+    float: left;
+    height: 210px;
+    position: absolute;
+    width: 291px;   
+    z-index:4100;
+    top:0;
+    left:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bg-gradient {
+    position: fixed;
+    width: 1000px;
+    height: 1000px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    margin: -500px 0 0 -500px;
+    background: url('../images/bg-gradient.png') no-repeat center;
+}
+
+.container {
+    text-align: center;
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -400px;
+}
+   
+
+#CDT {
+    font-size: 60px;
+    color: #eee;
+    margin: 70px 0 100px;
+    font-weight: bold;
+    top: 0px;
+    position: absolute;
+}
+
+#CDT .number-wrapper {
+    margin: 10px;
+    -moz-box-shadow: 0 5px 8px #000000;
+    -webkit-box-shadow: 0 5px 8px #000000;
+    box-shadow: 0 5px 8px #000000;
+    position: relative;
+}
+
+#CDT .number {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: #000;
+    background-image: linear-gradient(bottom, #000000 2%, #3c3c3c 50%, #000000 100%);
+    background-image: -o-linear-gradient(bottom, #000000 2%, #3c3c3c 50%, #000000 100%);
+    background-image: -moz-linear-gradient(bottom, #000000 2%, #3c3c3c 50%, #000000 100%);
+    background-image: -webkit-linear-gradient(bottom, #000000 2%, #3c3c3c 50%, #000000 100%);
+    background-image: -ms-linear-gradient(bottom, #000000 2%, #3c3c3c 50%, #000000 100%);
+    -webkit-border-top-right-radius: 7px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topright: 7px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding: 0 12px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border: 1px solid #555;
+    -moz-box-shadow: inset 0 4px 0 rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: inset 0 4px 0 rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 4px 0 rgba(255, 255, 255, 0.2);
+    -moz-text-shadow: 0 3px 3px #000000;
+    -webkit-text-shadow: 0 3px 3px #000000;
+    text-shadow: 0 3px 3px #000000;
+}
+       
+#CDT .line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 52%;
+    left: 0;
+    background: #000;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+       
+.caption {
+   font-size: 12px;
+   position: absolute;
+   bottom: -30px;
+   left: 0;
+   text-align: center;
+   width: 100%;
+   color: #777;
+}
+    
+.pachka{
+    position: absolute;
+    width:15px;
+    height: 15px;
+    border:3px solid #0f0;
+    display: block;
+    cursor: pointer;
+    z-index: 50;
+    left:50%;
+    bottom:20px;
+    -webkit-transition: all 1.5s ease-out;
+    -moz-transition: all 1.5s ease-out;
+    -o-transition: all 1.5s ease-out;
+    transition: all 1.5s ease-out;
+}
+
+.schon_v{    
+    left:100% !important;
+    bottom: 100% !important;
+    opacity: 0;
+}
+
+
+
+

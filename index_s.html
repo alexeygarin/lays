@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<title>Lay's</title>
+
+	<!--link href="css/bootstrap.min.css" rel="stylesheet"-->
+    <script src="js/jquery.min.js"></script>
+    <!--script src="js/bootstrap.min.js"></script-->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery.pagepiling.js"></script>
+    <script type="text/javascript" src="/js/C3counter.js"></script>
+    <script type="text/javascript" src="/js/countdown.js"></script>
+
+	<script>
+
+	$(document).ready(function() {
+    
+            /*
+            * Plugin intialization
+            */
+            $('#pagepiling').pagepiling({
+                direction: 'horizontal',
+                menu: '#menu',
+                anchors: ['page1', 'page2', 'page3', 'page4'],                
+                navigation: {
+                    'position': 'right',
+                    'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+                },
+                afterRender: function(){
+                    $('#pp-nav').addClass('custom');
+                },
+                afterLoad: function(anchorLink, index){
+                    if(index>1){
+                        $('#pp-nav').removeClass('custom');
+                    }else{
+                        $('#pp-nav').addClass('custom');
+                    }
+                }
+            });
+
+            var z=0;
+
+            $('.pachka').click(function() {
+              $(this).addClass('schon_v');
+              
+              z=z+1;
+              $("#versucht").html(z);
+            });
+
+
+            $('.pachka_s').click(function() {
+              $(this).addClass('schon_v');
+              $("#pp"+$(this).attr("p-id")).addClass('schon_v');
+              
+              z=z+1;
+              $("#versucht").html(z);
+            });
+
+
+
+
+
+            $( ".pachka_s" ).hover(
+              function() {
+              
+               $("#pp"+$(this).attr("p-id")).css({'opacity':1});
+               $("#pp"+$(this).attr("p-id")).addClass("active_p");
+
+              }, function() {
+                $("#pp"+$(this).attr("p-id")).css({'opacity':0});
+                $("#pp"+$(this).attr("p-id")).removeClass("active_p");
+              }
+            );
+             
+
+
+
+
+
+            $( ".pachka" ).each(function() {
+              //$( this ).css( "bottom": ($(this).attr('rel-height')*$(window).width()*0.3)+"%" );
+              $(this).css({ "bottom": ($(this).attr('rel-height')*$(window).width()*0.014   )+"px"  });
+            });
+
+            $( ".pachka_s" ).each(function() {
+              //$( this ).css( "bottom": ($(this).attr('rel-height')*$(window).width()*0.3)+"%" );
+              $(this).css({ "bottom": ($(this).attr('rel-height')*$(window).width()*0.014  )+"px"  });
+            });
+
+        });
+
+
+$(window).resize(function() {
+
+ $( ".pachka" ).each(function() {
+              //$( this ).css( "bottom": ($(this).attr('rel-height')*$(window).width()*0.3)+"%" );
+              $(this).css({ "bottom": ($(this).attr('rel-height')*$(window).width()*0.014  )+"px"  });
+            });
+
+$( ".pachka_s" ).each(function() {
+              //$( this ).css( "bottom": ($(this).attr('rel-height')*$(window).width()*0.3)+"%" );
+              $(this).css({ "bottom": ($(this).attr('rel-height')*$(window).width()*0.014  )+"px"  });
+            });
+
+})
+
+	</script>
+
+</head>
+<body>
+<!-- div id="menu"><img src="img/menu-buttons.png" width=75% /></div -->
+
+
+
+<div id="pagepiling">
+    
+    <div class="section picnik">
+	<div class="oblaka-2"></div>
+	<div class="composition-22"></div>
+
+    <div class="object-22"></div>
+
+    <div class="top-panel">
+        <div class="gelbe">
+        </div>
+        <div class="top_content">Знайдено об’єктів: <span id="versucht">0</span>/15
+             <div id="CDT"></div>
+
+        </div>
+
+       
+
+    </div>
+
+    
+
+   
+        
+
+    <div>
+        <div class="pachka pp1 pachka_big" style="left: 6%; " id="pp1" rel-height="3.0"></div>
+        <div class="pachka pp2 pachka_big" style="left: 30%; " id="pp2" rel-height="8"></div>
+        <div class="pachka pp3 pachka_big" style="left: 58%; " id="pp3" rel-height="6.8"></div>
+        <div class="pachka pp4 pachka_small" style="left: 5%; " id="pp4" rel-height="14"></div>
+        <div class="pachka pp5 pachka_big" style="left: 19%; " id="pp5" rel-height="5"></div>
+        <div class="pachka pp6 pachka_small" style="left: 33%; " id="pp6" rel-height="22"></div>
+        <div class="pachka pp7 pachka_big" style="left: 29.5%; " id="pp7" rel-height="12.9"></div>
+        <div class="pachka pp8 pachka_small" style="left: 45%; " id="pp8" rel-height="10"></div>
+        <div class="pachka pp9 pachka_big" style="left: 50.5%; " id="pp9" rel-height="7.5"></div>
+        <div class="pachka pp10 pachka_small" style="left: 55%; " id="pp10" rel-height="1.32"></div>
+        <div class="pachka pp11 pachka_big" style="left: 53%; " id="pp11" rel-height="13.2"></div>
+        <div class="pachka pp12 pachka_small" style="left: 59%; " id="pp12" rel-height="21"></div>
+        <div class="pachka pp13 pachka_big" style="left: 58%; " id="pp13" rel-height="10.9"></div>
+        <div class="pachka pp14 pachka_small" style="left: 67%; " id="pp14" rel-height="6"></div>
+        <div class="pachka pp15 pachka_big" style="left: 79%; " id="pp15" rel-height="11.5"></div>
+    </div>
+
+
+
+    <div>
+        <div class="pachka_s  " style="left: 6%; " rel-height="3.0" p-id="1"></div>
+        <div class="pachka_s  " style="left: 30%; " rel-height="8" p-id="2"></div>
+        <div class="pachka_s  " style="left: 58%; " rel-height="6.8" p-id="3"></div>
+        <div class="pachka_s  " style="left: 5%; " rel-height="14" p-id="4"></div>
+        <div class="pachka_s  " style="left: 19%; " rel-height="5" p-id="5"></div>
+        <div class="pachka_s  " style="left: 33%; " rel-height="22" p-id="6"></div>
+        <div class="pachka_s  " style="left: 29.5%; " rel-height="12.9" p-id="7"></div>
+        <div class="pachka_s  " style="left: 45%; " rel-height="10" p-id="8"></div>
+        <div class="pachka_s  " style="left: 50.5%; " rel-height="7.5" p-id="9"></div>
+        <div class="pachka_s  " style="left: 55%; " rel-height="1.32" p-id="10"></div>
+        <div class="pachka_s  " style="left: 53%; " rel-height="13.2" p-id="11"></div>
+        <div class="pachka_s  " style="left: 59%; " rel-height="21" p-id="12"></div>
+        <div class="pachka_s  " style="left: 58%; " rel-height="10.9" p-id="13"></div>
+        <div class="pachka_s  " style="left: 67%; " rel-height="6" p-id="14"></div>
+        <div class="pachka_s  " style="left: 79%; " rel-height="11.5" p-id="15"></div>
+    </div>
+
+
+    
+    
+
+</div>
+
+</body>
+</html>

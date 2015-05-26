@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<title>Lay's</title>
+
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	  <script type="text/javascript" src="js/jquery.pagepiling.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="/js/C3counter.js"></script>
+
+	<script>
+
+	$(document).ready(function() {
+    
+            /*
+            * Plugin intialization
+            */
+            $('#pagepiling').pagepiling({
+                direction: 'horizontal',
+                menu: '#menu',
+                //keyboardScrolling: false,
+                             
+                navigation: {
+                    'position': 'right'
+                },
+                afterRender: function(){
+                    $('#pp-nav').addClass('custom');
+                },
+                afterLoad: function(anchorLink, index){
+                    if(index>1){
+                        $('#pp-nav').removeClass('custom');
+                    }else{
+                        $('#pp-nav').addClass('custom');
+                    }
+                }
+            });
+
+
+
+            
+            $( "#start" ).mousedown(function() {              
+              $( this ).css({'background': "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('img/game_start_button.png')"});
+            });
+            $( "#start" ).mouseup(function() {              
+              $( this ).css({'background': " url('img/game_start_button.png')"});
+            });
+
+
+            $('.modal_list_link').click(function() {
+              $(".modal_list").removeClass('modal_aktive');
+              //alert($(this).attr('href'));
+              $($(this).attr('href')).addClass('modal_aktive');
+              return false;
+              //z=z+1;
+              //$("#versucht").html(z);
+            });
+
+        });
+
+	</script>
+
+</head>
+<body>
+<!-- div id="menu"><img src="img/menu-buttons.png" width=75% /></div -->
+
+<img src="img/shariki.png" id="shari" class="e0">
+
+<div id="pagepiling">
+    <div class="section main" id="section1">
+	<div class="oblaka-1"></div>
+	<div class="composition-1"></div>
+    <div class="dom gif"></div>
+    <div class="people gif"></div>
+
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#viktorina" style="position:absolute; z-index:1000; left:20%; top:10%;">
+    Викторина</button>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#vitaemo" style="position:absolute; z-index:1000; left:20%; top:10%; margin-left:150px;">
+    Вітаємо</button>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginform" style="position:absolute; z-index:1000; left:20%; top:10%; margin-left:300px;">
+    Авторизация</button>
+
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerform" style="position:absolute; z-index:1000; left:20%; top:10%; margin-left:0px; margin-top:100px;">
+    Регистрация</button>
+
+
+
+<div id="board">
+     <div id="game">
+             <div class="codeplace">
+                <form name="name_form">
+                    <input type="text" value="1234567890" namestart_val id="start_val">
+                </form>
+            </div>      
+        
+            <div id="counter"></div>          
+
+            <div id="start_button">
+                <button id="start" onClick='check_code();return false;'></button>
+            </div>
+
+            <div id="arrows"></div>
+
+            <script type="text/javascript">                
+                C3Counter("counter", "yes" , "1,1,1", "2,17,25" );
+            </script>
+
+        
+     </div>   
+    </div>
+
+        <div id="container" class="content clearfix">
+        
+</div>   
+ 
+
+    </div> 
+
+    
+    <div class="section picnik" id="section2">
+	<div class="oblaka-2"></div>
+	<div class="composition-2"></div>
+       <div class="picniccouple gif"></div>
+	<div class="smoke gif"></div>
+	<div class="kite gif"></div>
+
+
+
+    </div>
+    <div class="section beach" id="section3">
+	<div class="oblaka-3"></div>
+	<div class="composition-3"></div>
+	<div class="crab gif"></div>
+	<div class="beachcouple gif"></div>
+	<div class="photocouple gif"></div>
+
+    
+
+    
+
+    
+
+
+
+
+    </div>
+    <div class="section party" id="section4">
+	<div class="oblaka-4"></div>
+	<div class="composition-4"></div>
+	<div class="partycouple gif"></div>
+	<div class="partygirls gif"></div>
+	<div class="partydj gif"></div>
+    </div>
+</div>
+
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  ВИКТОРИНА НАЧАЛО  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<div class="modal fade gelbemodal" id="viktorina" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Витаемо</h4>
+          </div>
+          <div class="modal-body">
+            
+
+            <ul>
+              <li class="modal_list modal_aktive" id="vikt_1">
+                <h1>ТЫ ЧИПСОФАН</h1>
+                <h3>Твоя любовь к чипсам... Лорем ипсум</h3>
+                <div>
+                  <img src="" style="float:left; margin-right:15px; margin-bottom:15px;">
+                  <p>Поделись результатом и .... </p>
+                  <p>Поделись результатом и .... </p>
+                  <a href="#vikt_2" class="modal_list_link">Дальше </a>
+                </div>
+              </li>
+              <li class="modal_list" id="vikt_2">
+                <h1>ТЫ НЕ ЧИПСОФАН 2</h1>
+                <h3>Твоя любовь к чипсам... Лорем ипсум</h3>
+                <div>
+                  <img src="" style="float:left; margin-right:15px; margin-bottom:15px;">
+                  <p>Поделись результатом и .... </p>
+                  <p>Поделись результатом и .... </p>
+                  <a href="#vikt_3" class="modal_list_link">Дальше </a>
+                </div>
+              </li>
+              <li class="modal_list" id="vikt_3">
+                <h1>ТЫ НЕ ЧИПСОФАН 3</h1>
+                <h3>Твоя любовь к чипсам... Лорем ипсум</h3>
+                <div>
+                  <img src="" style="float:left; margin-right:15px; margin-bottom:15px;">
+                  <p>Поделись результатом и .... </p>
+                  <p>Поделись результатом и .... </p>
+                  <a href="#vikt_4" class="modal_list_link">Дальше </a>
+                </div>
+              </li>
+              <li class="modal_list" id="vikt_4">
+                <h1>ТЫ НЕ ЧИПСОФАН 4</h1>
+                <h3>Твоя любовь к чипсам... Лорем ипсум</h3>
+                <div>
+                  <img src="" style="float:left; margin-right:15px; margin-bottom:15px;">
+                  <p>Поделись результатом и .... </p>
+                  <p>Поделись результатом и .... </p>
+                  <a href="#vikt_5" class="modal_list_link">Дальше </a>
+                </div>
+              </li>
+              <li class="modal_list" id="vikt_5">
+                <h1>ТЫ НЕ ЧИПСОФАН 5</h1>
+                <h3>Твоя любовь к чипсам... Лорем ипсум</h3>
+                <div>
+                  <img src="" style="float:left; margin-right:15px; margin-bottom:15px;">
+                  <p>Поделись результатом и .... </p>
+                  <p>Поделись результатом и .... </p>
+
+                </div>
+              </li>
+            </ul>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  ВИКТОРИНА КОНЕЦ  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  ВІТАЄМО НАЧАЛО  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<div class="modal fade gelbemodal" id="vitaemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Витаемо</h4>
+          </div>
+          <div class="modal-body">
+            
+
+            <p>Ти знайшов <span style="font-size:30px; color:#ac1512"><strong>10</strong></span> з 15 пачок чіпсів</p>
+            <p>Поділись результатом та отримай <span >10 балів</span><br /> 
+              Кожні <span >100 балів</span> участь у розіграші</p>
+            <p><span >ДЖЕКПОТУ</span> 
+              <span ><strong>5000</strong></span> 
+              <span >грн.</span></p>
+            <p>Подлілись <i class="fa fa-arrow-circle-o-right"></i> <i class="fa fa-facebook-square"></i></p>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  ВІТАЄМО КОНЕЦ  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  АВТОРИЗАЦІЯ НАЧАЛО  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<div class="modal fade gelbemodal" id="loginform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Хочеш подарунків?</h4>
+          </div>
+          <div class="modal-body">
+            
+            <p> Авторизуйся на сайті за допомогою</p>
+            <p style="font-size:80px"><i class="fa fa-arrow-circle-o-right"></i> <i class="fa fa-facebook-square"></i></p>
+            <p>  
+
+              <span >Або</span> <a href="#">зареєструйся</a>
+       
+              <span >та заходь</span><br />з номером свого мобільного</p>
+            <p>Подлілись <i class="fa fa-arrow-circle-o-right"></i> <i class="fa fa-facebook-square"></i></p>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  АВТОРИЗАЦІЯ КОНЕЦ  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  РЕГИСТРАЦИЯ НАЧАЛО  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<div class="modal fade gelbemodal" id="registerform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Для реєстрації на сайті вкажи наступні дані:</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-inline">
+            <div class="form-group">
+              <label for="form_phone">Телефон</label>
+              <input type="text" class="form-control" placeholder="Телефон" id="form_phone" >
+            </div>
+            <div class="form-group">
+              <label for="form_pass">Пароль</label>
+              <input type="password" class="form-control" placeholder="Пароль"  id="form_pass">
+            </div>
+            <div class="form-group">
+              <label for="form_pass_2">Підтвердження паролю</label>
+              <input type="password" class="form-control"  placeholder="Підтвердження паролю" id="form_pass_2">
+            </div>
+            <div class="form-group">
+              <label for="form_mail">E-mail для відновлення паролю</label>
+              <input type="email" class="form-control" placeholder="E-mail для відновлення паролю" id="form_mail" >
+            </div>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Я погоджуюсь з офіційними правилами 
+              </label>
+            </div>
+          </form>
+
+<br />&nbsp;
+            
+            <p style="font-size:20px;"> Перевір правильність вказаного номеру мобільного.<br />Потім ти вже не зможеш його змінити!</p>
+            <p><span style="font-size:20px;">У разі невірно вказаного номеру<br />ти не зможеш отримати подарунки!</span></p>
+                      
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  РЕГИСТРАЦИЯ КОНЕЦ  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<title>Lay's</title>
+
+	<!--link href="css/bootstrap.min.css" rel="stylesheet"-->
+    <script src="js/jquery.min.js"></script>
+    <!--script src="js/bootstrap.min.js"></script-->
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery.pagepiling.js"></script>
+    <script type="text/javascript" src="/js/C3counter.js"></script>
+
+	<script>
+
+	$(document).ready(function() {
+    
+            /*
+            * Plugin intialization
+            */
+            $('#pagepiling').pagepiling({
+                direction: 'horizontal',
+                menu: '#menu',
+                anchors: ['page1', 'page2', 'page3', 'page4'],                
+                navigation: {
+                    'position': 'right',
+                    'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+                },
+                afterRender: function(){
+                    $('#pp-nav').addClass('custom');
+                },
+                afterLoad: function(anchorLink, index){
+                    if(index>1){
+                        $('#pp-nav').removeClass('custom');
+                    }else{
+                        $('#pp-nav').addClass('custom');
+                    }
+                }
+            });
+        });
+
+	</script>
+
+</head>
+<body>
+<!-- div id="menu"><img src="img/menu-buttons.png" width=75% /></div -->
+
+<img src="img/shariki.png" id="shari" class="e0">
+
+<div id="pagepiling">
+    <div class="section main">
+	<!--div class="oblaka-1"></div>
+	<div class="composition-1" ></div-->
+	
+	<!-- div id="board"></div -->
+
+        <div id="container" class="content clearfix">
+        <div class="offerHolder" style="z-index:200">
+                        
+            <form name="name_form">
+                <input type="text" value="12,13,14" namestart_val id="start_val">
+                <button id="start" onClick='
+
+                 C3Counter("counter", "no",  "1,1,1", document.name_form.start_val.value );
+
+                return false;'>start</button>
+            </form>    
+
+                <div class="special">
+                    <div id="counter">              
+                        <!-- div id="shading">&nbsp;</div -->
+                    </div>          
+                    
+                    
+                    <script type="text/javascript">
+                        // Default options 
+                        C3Counter("counter", "yes" , "1,1,1", "12,17,7" );
+                    </script>
+                </div>
+            
+	</div>      
+</div>   
+ 
+
+    </div>
+    <div class="section picnik">
+	<div class="oblaka-2"></div>
+	<div class="composition-2"></div>
+    </div>
+    <div class="section beach">
+	<div class="oblaka-3"></div>
+	<div class="composition-3"></div>
+    </div>
+    <div class="section party">
+	<div class="oblaka-4"></div>
+	<div class="composition-4"></div>
+    </div>
+</div>
+
+</body>
+</html>
